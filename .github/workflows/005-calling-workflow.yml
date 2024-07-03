@@ -4,6 +4,6 @@ on: [push]
 
 jobs:
   useCallable:
-    uses: ./.github/workflows/004-callable_workflow.yml
+    uses: 004-callable_workflow.yml
     with:
       name: 'Atit'
