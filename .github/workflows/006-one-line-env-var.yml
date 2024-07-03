@@ -12,7 +12,7 @@ jobs:
       - name: Defining a new Environment Variable
         run: |
           ONE_LINE_TEXT="This is a one-line text"
-          echo "ONE_LINE_TEXT_ENV_VAR=$ONE_LINE_TEXT" >> $GITHUB_VAR
+          echo "ONE_LINE_TEXT_ENV_VAR=$ONE_LINE_TEXT" >> $GITHUB_ENV
 
       - name: Using the previously defined environment variable
         run: |
