@@ -1,0 +1,19 @@
+name: Test CI - One-Line Value
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    branches: ['main']
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Defining a new Environment Variable
+        run: |
+          ONE_LINE_TEXT="This is a one-line text"
+          echo "ONE_LINE_TEXT_ENV_VAR=$ONE_LINE_TEXT" >> $GITHUB_VAR
+
+      - name: Using the previously defined environment variable
+        run: |
+          echo ${{ env.ONE_LINE_TEXT_ENV_VAR }}
